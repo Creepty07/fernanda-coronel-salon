@@ -3,483 +3,391 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <!-- SEO meta tags → renderer.js los genera desde config.js -->
   <link rel="canonical" href="https://fernandacoronel.com">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <!-- Google Fonts → renderer.js inyecta el <link> desde config.js -->
 
   <link rel="stylesheet" href="css/base.css">
   <link rel="stylesheet" href="css/components.css">
   <link rel="stylesheet" href="css/enhancements.css">
 
-  <!-- Config debe cargar antes que renderer y app -->
   <script src="js/config.js"></script>
-
   <title>Fernanda Coronel Salón</title>
 </head>
 <body>
 
-  <!-- ══════════════════════════════════════
-       CURSOR (enhancements.js)
-  ══════════════════════════════════════ -->
-  <div id="cursor-dot"  aria-hidden="true"></div>
-  <div id="cursor-ring" aria-hidden="true"></div>
+<!-- CURSOR -->
+<div id="cursor-dot"  aria-hidden="true"></div>
+<div id="cursor-ring" aria-hidden="true"></div>
 
-  <!-- ══════════════════════════════════════
-       LOADER (app.js)
-  ══════════════════════════════════════ -->
-  <div id="page-loader" role="status" aria-label="Cargando">
-    <div class="loader-logo">FC</div>
-    <div class="loader-tagline">Cargando tu experiencia</div>
-    <div class="loader-bar"></div>
-  </div>
+<!-- LOADER -->
+<div id="page-loader" role="status" aria-label="Cargando">
+  <div class="loader-logo">FC</div>
+  <div class="loader-tagline">Cargando tu experiencia</div>
+  <div class="loader-bar"></div>
+</div>
 
-  <!-- ══════════════════════════════════════
-       SCROLL PROGRESS (app.js)
-  ══════════════════════════════════════ -->
-  <div id="scroll-progress" role="presentation" aria-hidden="true"></div>
+<div id="scroll-progress" role="presentation" aria-hidden="true"></div>
 
-  <!-- ══════════════════════════════════════
-       NAVBAR
-  ══════════════════════════════════════ -->
-  <header id="navbar" role="banner">
-    <div class="container nav-inner">
-
-      <a href="#" class="nav-logo" aria-label="Inicio — Fernanda Coronel Salón">
-        <span id="nav-logo-text">FERNANDA CORONEL</span>
-        <span id="nav-logo-sub">SALÓN · JURIQUILLA</span>
-      </a>
-
-      <nav class="nav-links" aria-label="Navegación principal">
-        <a href="#sobre">Nosotros</a>
-        <a href="#servicios">Servicios</a>
-        <a href="#precios">Precios</a>
-        <a href="#galeria">Galería</a>
-        <a href="#faq">FAQ</a>
-        <a href="#contacto">Contacto</a>
-      </nav>
-
-      <div class="nav-actions">
-        <button id="theme-toggle" aria-label="Cambiar tema">☾</button>
-        <a href="#contacto" class="btn btn-primary"
-           style="padding:.6rem 1.4rem;font-size:.63rem;">
-          Agendar cita
-        </a>
-        <button id="nav-toggle" aria-label="Abrir menú" aria-expanded="false">
-          <span></span><span></span><span></span>
-        </button>
-      </div>
-
-    </div>
-  </header>
-
-  <!-- Mobile menu -->
-  <nav id="mobile-menu" aria-label="Menú móvil">
-    <a href="#sobre">Nosotros</a>
-    <a href="#servicios">Servicios</a>
-    <a href="#precios">Precios</a>
-    <a href="#galeria">Galería</a>
-    <a href="#faq">FAQ</a>
-    <a href="#contacto">Contacto</a>
-  </nav>
-
-    <!-- ══════════════════════════════════════
-       BANNER DE OFERTA (renderer.js → config.banner)
-  ══════════════════════════════════════ -->
-  <div id="offer-banner" role="banner" aria-live="polite">
-    <span class="offer-text"></span>
-    <a class="offer-cta" href="#contacto"></a>
-    <button id="offer-close" aria-label="Cerrar anuncio">✕</button>
-  </div>
-
-  <!-- ══════════════════════════════════════
-       HERO
-  ══════════════════════════════════════ -->
-  <section id="hero" aria-label="Inicio">
-    <div id="hero-bg" class="hero-bg" role="img" aria-label="Salón de belleza Fernanda Coronel"></div>
-    <div class="hero-overlay" aria-hidden="true"></div>
-
-    <div class="container">
-      <div class="hero-content">
-        <p class="label hero-label">Juriquilla · Querétaro</p>
-        <h1 class="display-xl hero-title">
-          <span id="typewriter"></span>
-        </h1>
-        <p class="hero-subtitle" id="hero-subtitle"></p>
-        <div class="hero-ctas">
-          <a id="hero-cta1" href="#" class="btn btn-primary" target="_blank" rel="noopener"></a>
-          <a id="hero-cta2" href="#servicios" class="btn btn-outline"
-             style="border-color:rgba(245,237,216,.5);color:#F5EDD8;"></a>
-        </div>
-      </div>
-    </div>
-
-    <div id="hero-trust" class="hero-trust" aria-hidden="true"></div>
-
-    <div class="hero-scroll-hint" aria-hidden="true">
-      <div class="scroll-line"></div>
-      <span>Descubrir</span>
-    </div>
-  </section>
-
-  <!-- ══════════════════════════════════════
-       MARCAS
-  ══════════════════════════════════════ -->
-  <div id="marcas" aria-label="Marcas con las que trabajamos">
-    <div class="container">
-      <p class="label" style="text-align:center">Trabajamos con las mejores marcas</p>
-      <div id="marcas-track" class="marcas-track"></div>
+<!-- NAVBAR -->
+<header id="navbar" role="banner">
+  <div class="container nav-inner">
+    <a href="#" class="nav-logo" id="nav-logo-wrap" aria-label="Inicio"></a>
+    <nav id="nav-links" class="nav-links" aria-label="Navegación principal"></nav>
+    <div class="nav-actions">
+      <nav id="nav-social" class="nav-social" aria-label="Redes sociales"></nav>
+      <button id="theme-toggle" aria-label="Cambiar tema">☾</button>
+      <a href="#contacto" id="nav-agendar" class="btn btn-primary" style="padding:.6rem 1.4rem;font-size:.63rem;"></a>
+      <button id="nav-toggle" aria-label="Abrir menú" aria-expanded="false">
+        <span></span><span></span><span></span>
+      </button>
     </div>
   </div>
+</header>
 
-  <!-- ══════════════════════════════════════
-       SOBRE
-  ══════════════════════════════════════ -->
-  <section id="sobre" class="section-gap" aria-labelledby="sobre-titulo">
-    <div class="container">
-      <div class="sobre-grid">
+<!-- MOBILE MENU -->
+<nav id="mobile-menu" aria-label="Menú móvil">
+  <div id="mobile-links"></div>
+  <div id="mobile-social" class="mobile-social"></div>
+</nav>
 
-        <div class="sobre-imagen-wrap reveal reveal-left">
-          <img id="sobre-imagen" class="sobre-imagen" src="" alt="" loading="lazy">
-          <div class="sobre-imagen-deco" aria-hidden="true"></div>
-        </div>
+<!-- BANNER -->
+<div id="offer-banner" role="banner" aria-live="polite">
+  <span class="offer-text"></span>
+  <a class="offer-cta" href="#contacto"></a>
+  <button id="offer-close" aria-label="Cerrar anuncio">✕</button>
+</div>
 
-        <div class="sobre-texto">
-          <p class="label reveal">El Salón</p>
-          <h2 id="sobre-titulo" class="display-lg reveal">Nuestra esencia</h2>
-          <div class="gold-divider reveal"></div>
-          <div id="sobre-parrafos" class="reveal"></div>
-          <div id="sobre-stats"   class="sobre-stats"></div>
-        </div>
-
+<!-- HERO -->
+<section id="hero" aria-label="Inicio">
+  <div id="hero-bg" class="hero-bg" role="img" aria-label="Fernanda Coronel Salón"></div>
+  <div class="hero-overlay" aria-hidden="true"></div>
+  <div class="container">
+    <div class="hero-content">
+      <p class="label hero-label">Juriquilla · Querétaro</p>
+      <h1 class="display-xl hero-title"><span id="typewriter"></span></h1>
+      <p class="hero-subtitle" id="hero-subtitle"></p>
+      <div class="hero-ctas">
+        <a id="hero-cta1" href="#" class="btn btn-primary" target="_blank" rel="noopener"></a>
+        <a id="hero-cta2" href="#servicios" class="btn btn-outline" style="border-color:rgba(245,237,216,.5);color:#F5EDD8;"></a>
       </div>
     </div>
-  </section>
+  </div>
+  <div id="hero-trust" class="hero-trust" aria-hidden="true"></div>
+  <div class="hero-scroll-hint" aria-hidden="true">
+    <div class="scroll-line"></div><span>Descubrir</span>
+  </div>
+</section>
 
-  <!-- ══════════════════════════════════════
-       SERVICIOS
-  ══════════════════════════════════════ -->
-  <section id="servicios" class="section-gap" aria-labelledby="servicios-titulo">
-    <div class="container">
-      <div class="section-header">
-        <p class="label reveal">Lo que hacemos</p>
-        <h2 id="servicios-titulo" class="display-lg reveal">Servicios</h2>
+<!-- MARCAS (marquee) -->
+<div id="marcas" aria-label="Marcas con las que trabajamos">
+  <div class="container marcas-label-wrap">
+    <p class="label" id="marcas-label"></p>
+  </div>
+  <div class="marquee-track" id="marquee-track"></div>
+</div>
+
+<!-- SOBRE -->
+<section id="sobre" class="section-gap" aria-labelledby="sobre-titulo">
+  <div class="container">
+    <div class="sobre-grid">
+      <div class="sobre-imagen-wrap reveal reveal-left">
+        <img id="sobre-imagen" class="sobre-imagen" src="" alt="" loading="lazy">
+        <div class="sobre-imagen-deco" aria-hidden="true"></div>
+      </div>
+      <div class="sobre-texto">
+        <p class="label reveal" id="sobre-label"></p>
+        <h2 id="sobre-titulo" class="display-lg reveal"></h2>
         <div class="gold-divider reveal"></div>
+        <div id="sobre-parrafos" class="reveal"></div>
+        <div id="sobre-stats"   class="sobre-stats"></div>
       </div>
-      <div id="servicios-grid" class="servicios-grid"></div>
     </div>
-  </section>
+  </div>
+</section>
 
-  <!-- ══════════════════════════════════════
-       PRECIOS
-  ══════════════════════════════════════ -->
-  <section id="precios" class="section-gap" aria-labelledby="precios-titulo">
-    <div class="container">
-      <div class="section-header">
-        <p class="label reveal">Transparencia total</p>
-        <h2 id="precios-titulo" class="display-lg reveal">Inversión en ti</h2>
-        <div class="gold-divider reveal"></div>
-        <p class="reveal" style="color:var(--color-text-muted);font-size:1.05rem;max-width:500px;margin:0 auto">
-          Los precios varían según el largo y la condición del cabello.
-          Agenda una consulta gratuita para un presupuesto personalizado.
-        </p>
+<!-- SERVICIOS (carrusel) -->
+<section id="servicios" class="section-gap" aria-labelledby="servicios-titulo">
+  <div class="container">
+    <div class="section-header">
+      <p class="label reveal" id="servicios-label"></p>
+      <h2 id="servicios-titulo" class="display-lg reveal"></h2>
+      <div class="gold-divider reveal"></div>
+    </div>
+    <div class="carousel-wrap reveal" id="servicios-carousel">
+      <div class="carousel-track" id="servicios-track"></div>
+      <div class="carousel-nav">
+        <button class="carousel-btn carousel-btn-prev" aria-label="Anterior">←</button>
+        <div class="carousel-dots"></div>
+        <button class="carousel-btn carousel-btn-next" aria-label="Siguiente">→</button>
       </div>
-      <div id="precios-grid" class="precios-grid"></div>
-      <p class="precio-disclaimer reveal">
-        * Precios orientativos desde, sujetos a evaluación en consulta. Incluye diagnóstico y consultoría de imagen sin costo.
-      </p>
     </div>
-  </section>
+  </div>
+</section>
 
-  <!-- ══════════════════════════════════════
-       ANTES / DESPUÉS
-  ══════════════════════════════════════ -->
-  <section id="antesdespues" class="section-gap" aria-labelledby="ad-titulo">
-    <div class="container">
-      <div class="section-header">
-        <p class="label reveal">La diferencia es visible</p>
-        <h2 id="ad-titulo" class="display-lg reveal">Antes &amp; Después</h2>
-        <div class="gold-divider reveal"></div>
-        <p class="reveal" style="color:var(--color-text-muted);font-size:1rem">
-          Arrastra el slider para ver la transformación
-        </p>
+<!-- PRECIOS (carrusel) -->
+<section id="precios" class="section-gap" aria-labelledby="precios-titulo">
+  <div class="container">
+    <div class="section-header">
+      <p class="label reveal" id="precios-label"></p>
+      <h2 id="precios-titulo" class="display-lg reveal"></h2>
+      <div class="gold-divider reveal"></div>
+      <p id="precios-nota" class="reveal" style="color:var(--color-text-muted);font-size:1.05rem;max-width:500px;margin:0 auto"></p>
+    </div>
+    <div class="carousel-wrap reveal" id="precios-carousel">
+      <div class="carousel-track" id="precios-track"></div>
+      <div class="carousel-nav">
+        <button class="carousel-btn carousel-btn-prev" aria-label="Anterior">←</button>
+        <div class="carousel-dots"></div>
+        <button class="carousel-btn carousel-btn-next" aria-label="Siguiente">→</button>
       </div>
-      <div id="ad-grid" class="ad-grid"></div>
     </div>
-  </section>
+    <p id="precios-disclaimer" class="precio-disclaimer reveal"></p>
+  </div>
+</section>
 
-  <!-- ══════════════════════════════════════
-       GALERÍA
-  ══════════════════════════════════════ -->
-  <section id="galeria" class="section-gap" aria-labelledby="galeria-titulo">
-    <div class="container">
-      <div class="section-header">
-        <p class="label reveal">Nuestros trabajos</p>
-        <h2 id="galeria-titulo" class="display-lg reveal">Galería</h2>
-        <div class="gold-divider reveal"></div>
+<!-- ANTES / DESPUÉS -->
+<section id="antesdespues" class="section-gap" aria-labelledby="ad-titulo">
+  <div class="container">
+    <div class="section-header">
+      <p class="label reveal" id="ad-label"></p>
+      <h2 id="ad-titulo" class="display-lg reveal"></h2>
+      <div class="gold-divider reveal"></div>
+      <p id="ad-instruccion" class="reveal" style="color:var(--color-text-muted);font-size:1rem"></p>
+    </div>
+    <div id="ad-grid" class="ad-grid"></div>
+  </div>
+</section>
+
+<!-- GALERÍA -->
+<section id="galeria" class="section-gap" aria-labelledby="galeria-titulo">
+  <div class="container">
+    <div class="section-header">
+      <p class="label reveal" id="galeria-label"></p>
+      <h2 id="galeria-titulo" class="display-lg reveal"></h2>
+      <div class="gold-divider reveal"></div>
+    </div>
+    <div id="galeria-filters" class="galeria-filters" role="group" aria-label="Filtros de galería"></div>
+    <div id="galeria-grid" class="galeria-grid"></div>
+    <button id="gallery-more-btn" class="btn btn-outline reveal" style="margin:2rem auto 0;display:none"></button>
+  </div>
+</section>
+
+<!-- TESTIMONIOS (carrusel) -->
+<section id="testimonios" class="section-gap" aria-labelledby="testimonios-titulo">
+  <div class="container">
+    <div class="section-header">
+      <p class="label reveal" id="testimonios-label"></p>
+      <h2 id="testimonios-titulo" class="display-lg reveal"></h2>
+      <div class="gold-divider reveal"></div>
+    </div>
+    <div class="carousel-wrap reveal" id="testimonios-carousel">
+      <div class="carousel-track" id="testimonios-track"></div>
+      <div class="carousel-nav">
+        <button class="carousel-btn carousel-btn-prev" aria-label="Anterior">←</button>
+        <div class="carousel-dots"></div>
+        <button class="carousel-btn carousel-btn-next" aria-label="Siguiente">→</button>
       </div>
-      <div id="galeria-filters" class="galeria-filters" role="group" aria-label="Filtros de galería"></div>
-      <div id="galeria-grid"   class="galeria-grid"></div>
     </div>
-  </section>
+  </div>
+</section>
 
-  <!-- ══════════════════════════════════════
-       TESTIMONIOS
-  ══════════════════════════════════════ -->
-  <section id="testimonios" class="section-gap" aria-labelledby="testimonios-titulo">
-    <div class="container">
-      <div class="section-header">
-        <p class="label reveal">Ellas lo dicen</p>
-        <h2 id="testimonios-titulo" class="display-lg reveal">Testimonios</h2>
-        <div class="gold-divider reveal"></div>
-      </div>
-      <div id="testimonios-grid" class="testimonios-grid"></div>
+<!-- FAQ -->
+<section id="faq" class="section-gap" aria-labelledby="faq-titulo">
+  <div class="container">
+    <div class="section-header">
+      <p class="label reveal" id="faq-label"></p>
+      <h2 id="faq-titulo" class="display-lg reveal"></h2>
+      <div class="gold-divider reveal"></div>
     </div>
-  </section>
+    <div id="faq-list" class="faq-list"></div>
+  </div>
+</section>
 
-  <!-- ══════════════════════════════════════
-       FAQ
-  ══════════════════════════════════════ -->
-  <section id="faq" class="section-gap" aria-labelledby="faq-titulo">
-    <div class="container">
-      <div class="section-header">
-        <p class="label reveal">Resolvemos tus dudas</p>
-        <h2 id="faq-titulo" class="display-lg reveal">Preguntas frecuentes</h2>
-        <div class="gold-divider reveal"></div>
-      </div>
-      <div id="faq-list" class="faq-list"></div>
+<!-- INSTAGRAM -->
+<section id="instagram" class="section-gap" aria-labelledby="instagram-titulo">
+  <div class="container">
+    <div class="section-header reveal">
+      <p class="label" id="instagram-label"></p>
+      <h2 id="instagram-titulo" class="display-lg"></h2>
+      <p id="instagram-handle" class="instagram-handle"></p>
     </div>
-  </section>
+    <div id="instagram-grid" class="instagram-grid reveal"></div>
+    <a id="instagram-btn" href="#" target="_blank" rel="noopener" class="btn btn-outline reveal" style="margin-top:2rem"></a>
+  </div>
+</section>
 
-  <!-- ══════════════════════════════════════
-       INSTAGRAM
-  ══════════════════════════════════════ -->
-  <section id="instagram" class="section-gap" aria-labelledby="instagram-titulo">
-    <div class="container">
-      <div class="section-header reveal">
-        <p class="label">Síguenos</p>
-        <h2 id="instagram-titulo" class="display-lg">Instagram</h2>
-        <p id="instagram-handle" class="instagram-handle"></p>
-      </div>
-      <div id="instagram-preview" class="instagram-preview"></div>
-      <a id="instagram-btn" href="#" target="_blank" rel="noopener"
-         class="btn btn-outline reveal">
-        Ver Instagram →
-      </a>
-    </div>
-  </section>
+<!-- CONTACTO -->
+<section id="contacto" class="section-gap" aria-labelledby="contacto-titulo">
+  <div class="container">
+    <div class="contacto-grid">
 
-  <!-- ══════════════════════════════════════
-       CONTACTO
-  ══════════════════════════════════════ -->
-  <section id="contacto" class="section-gap" aria-labelledby="contacto-titulo">
-    <div class="container">
-      <div class="contacto-grid">
+      <!-- Info -->
+      <div class="contacto-info">
+        <p class="label reveal" id="contacto-label"></p>
+        <h2 id="contacto-titulo" class="display-lg reveal"></h2>
+        <p id="contacto-desc" class="reveal"></p>
 
-        <!-- Info -->
-        <div class="contacto-info">
-          <p class="label reveal">Reserva tu lugar</p>
-          <h2 id="contacto-titulo" class="display-lg reveal">Agenda tu cita</h2>
-          <p class="reveal">
-            Completa el formulario y nos ponemos en contacto contigo en menos de 24 horas
-            para confirmar tu cita y resolver cualquier duda.
-          </p>
-          <div class="contacto-items reveal">
-            <div class="contacto-item">
-              <div class="contacto-item-icon" aria-hidden="true">📍</div>
-              <div>
-                <span class="contacto-item-label">Ubicación</span>
-                <span id="contacto-direccion" class="contacto-item-valor"></span>
-              </div>
-            </div>
-            <div class="contacto-item">
-              <div class="contacto-item-icon" aria-hidden="true">📞</div>
-              <div>
-                <span class="contacto-item-label">Teléfono</span>
-                <a id="contacto-telefono" href="#" class="contacto-item-valor"></a>
-              </div>
-            </div>
-            <div class="contacto-item">
-              <div class="contacto-item-icon" aria-hidden="true">💬</div>
-              <div>
-                <span class="contacto-item-label">WhatsApp</span>
-                <a id="contacto-wa" href="#" target="_blank" rel="noopener"
-                   class="contacto-item-valor">Enviar mensaje directo →</a>
-              </div>
-            </div>
-          </div>
-          <div id="contacto-social" class="contacto-social reveal"></div>
-        </div>
-
-        <!-- Formulario multi-paso -->
-        <div class="form-container reveal">
-
-          <div class="form-steps-indicator" id="steps-indicator" aria-hidden="true">
-            <div class="step-dot active"></div>
-            <div class="step-line"></div>
-            <div class="step-dot"></div>
-            <div class="step-line"></div>
-            <div class="step-dot"></div>
-          </div>
-
-          <!-- Paso 1: Servicio -->
-          <div class="form-step active" id="step-0">
+        <div class="contacto-items reveal">
+          <div class="contacto-item">
+            <div class="contacto-item-icon" aria-hidden="true">📍</div>
             <div>
-              <p class="form-step-title">¿Qué servicio te interesa?</p>
-              <p class="form-step-sub">Paso 1 de 3 — Puedes elegir más de uno</p>
-            </div>
-            <div id="service-chips" class="form-service-grid"></div>
-            <div class="form-nav">
-              <span class="form-counter" id="chips-counter">0 seleccionados</span>
-              <button class="btn btn-primary" data-form-action="next"
-                      style="padding:.7rem 1.6rem">Siguiente →</button>
+              <span class="contacto-item-label" id="contacto-ubicacion-label">Ubicación</span>
+              <span id="contacto-direccion" class="contacto-item-valor"></span>
             </div>
           </div>
-
-          <!-- Paso 2: Datos personales -->
-          <div class="form-step" id="step-1">
+          <div class="contacto-item">
+            <div class="contacto-item-icon" aria-hidden="true">📞</div>
             <div>
-              <p class="form-step-title">Tus datos de contacto</p>
-              <p class="form-step-sub">Paso 2 de 3 — Para confirmar tu cita</p>
-            </div>
-            <div class="form-group">
-              <label for="f-nombre"   class="form-label">Nombre completo</label>
-              <input id="f-nombre"    type="text"  class="form-input" placeholder="Tu nombre" autocomplete="name">
-            </div>
-            <div class="form-group">
-              <label for="f-telefono" class="form-label">Teléfono / WhatsApp</label>
-              <input id="f-telefono"  type="tel"   class="form-input" placeholder="442 000 0000" autocomplete="tel">
-            </div>
-            <div class="form-group">
-              <label for="f-email"    class="form-label">Correo electrónico</label>
-              <input id="f-email"     type="email" class="form-input" placeholder="tu@correo.com" autocomplete="email">
-            </div>
-            <div class="form-nav">
-              <button class="btn btn-ghost" data-form-action="prev">← Atrás</button>
-              <button class="btn btn-primary" data-form-action="next"
-                      style="padding:.7rem 1.6rem">Siguiente →</button>
+              <span class="contacto-item-label" id="contacto-telefono-label">Teléfono</span>
+              <a id="contacto-telefono" href="#" class="contacto-item-valor"></a>
             </div>
           </div>
-
-          <!-- Paso 3: Fecha y notas -->
-          <div class="form-step" id="step-2">
+          <div class="contacto-item">
+            <div class="contacto-item-icon" aria-hidden="true">💬</div>
             <div>
-              <p class="form-step-title">¿Cuándo quieres venir?</p>
-              <p class="form-step-sub">Paso 3 de 3 — Detalles adicionales</p>
-            </div>
-            <div class="form-group">
-              <label for="f-fecha"   class="form-label">Fecha preferida</label>
-              <input id="f-fecha"    type="date"  class="form-input">
-            </div>
-            <div class="form-group">
-              <label for="f-horario" class="form-label">Horario preferido</label>
-              <select id="f-horario" class="form-select">
-                <option value="">Selecciona un horario</option>
-                <option>Mañana (9:00 – 12:00)</option>
-                <option>Mediodía (12:00 – 15:00)</option>
-                <option>Tarde (15:00 – 18:00)</option>
-              </select>
-            </div>
-            <div class="form-group">
-              <label for="f-mensaje" class="form-label">¿Algo que debamos saber?</label>
-              <textarea id="f-mensaje" class="form-textarea"
-                        placeholder="Alergias, referencias de estilo, preguntas..."></textarea>
-            </div>
-            <div class="form-nav">
-              <button class="btn btn-ghost"    data-form-action="prev">← Atrás</button>
-              <button class="btn btn-primary"  data-form-action="submit"
-                      style="padding:.7rem 1.6rem">Enviar solicitud ✦</button>
+              <span class="contacto-item-label" id="contacto-wa-label">WhatsApp</span>
+              <a id="contacto-wa" href="#" target="_blank" rel="noopener" class="contacto-item-valor"></a>
             </div>
           </div>
-
-          <!-- Éxito -->
-          <div class="form-success" id="form-success" role="alert">
-            <div class="success-icon" aria-hidden="true">✓</div>
-            <p class="success-title">¡Solicitud enviada!</p>
-            <p class="success-text">
-              Nos pondremos en contacto contigo en las próximas horas para confirmar tu cita.
-              También puedes escribirnos directamente por WhatsApp.
-            </p>
-            <a id="success-wa" href="#" target="_blank" rel="noopener"
-               class="btn btn-primary" style="margin-top:.5rem">
-              Confirmar por WhatsApp
-            </a>
-          </div>
-
-        </div><!-- /.form-container -->
-      </div><!-- /.contacto-grid -->
-    </div>
-  </section>
-
-  <!-- ══════════════════════════════════════
-       FOOTER
-  ══════════════════════════════════════ -->
-  <footer id="footer" role="contentinfo">
-    <div class="container">
-      <div class="footer-grid">
-
-        <div class="footer-brand">
-          <div class="footer-logo-text">FERNANDA CORONEL</div>
-          <p class="footer-tagline">Belleza con propósito, estilo con esencia</p>
-          <div class="footer-social" id="footer-social"></div>
         </div>
 
-        <div class="footer-col">
-          <p class="footer-col-title">Servicios</p>
-          <ul id="footer-servicios"></ul>
-        </div>
-
-        <div class="footer-col">
-          <p class="footer-col-title">Salón</p>
-          <ul>
-            <li><a href="#sobre">Nuestra historia</a></li>
-            <li><a href="#galeria">Galería</a></li>
-            <li><a href="#precios">Precios</a></li>
-            <li><a href="#testimonios">Testimonios</a></li>
-            <li><a href="#faq">Preguntas frecuentes</a></li>
-            <li><a href="#contacto">Contacto</a></li>
-          </ul>
-        </div>
-
+        <div id="contacto-horarios" class="contacto-horarios reveal"></div>
+        <div id="contacto-social" class="contacto-social reveal"></div>
+        <div id="contacto-map" class="map-wrap reveal"></div>
       </div>
 
-      <div class="footer-bottom">
-        <span class="footer-copy">
-          © <span id="footer-year"></span> Fernanda Coronel Salón, Juriquilla, Querétaro.
-          Todos los derechos reservados.
-        </span>
-        <span class="footer-copy" style="opacity:.4">Diseño premium ✦</span>
+      <!-- Formulario multi-paso -->
+      <div class="form-container reveal">
+        <div class="form-steps-indicator" id="steps-indicator" aria-hidden="true">
+          <div class="step-dot active"></div>
+          <div class="step-line"></div>
+          <div class="step-dot"></div>
+          <div class="step-line"></div>
+          <div class="step-dot"></div>
+        </div>
+
+        <!-- Paso 1 -->
+        <div class="form-step active" id="step-0">
+          <div>
+            <p class="form-step-title" id="form-paso1-titulo"></p>
+            <p class="form-step-sub"   id="form-paso1-sub"></p>
+          </div>
+          <div id="service-chips" class="form-service-grid"></div>
+          <div class="form-nav">
+            <span class="form-counter" id="chips-counter">0 seleccionados</span>
+            <button class="btn btn-primary" data-form-action="next" style="padding:.7rem 1.6rem">Siguiente →</button>
+          </div>
+        </div>
+
+        <!-- Paso 2 -->
+        <div class="form-step" id="step-1">
+          <div>
+            <p class="form-step-title" id="form-paso2-titulo"></p>
+            <p class="form-step-sub"   id="form-paso2-sub"></p>
+          </div>
+          <div class="form-group">
+            <label for="f-nombre" class="form-label" id="form-nombre-label">Nombre completo</label>
+            <input id="f-nombre" type="text" class="form-input" autocomplete="name">
+          </div>
+          <div class="form-group">
+            <label for="f-email" class="form-label" id="form-email-label">Correo electrónico</label>
+            <input id="f-email" type="email" class="form-input" autocomplete="email">
+          </div>
+          <div class="form-nav">
+            <button class="btn btn-ghost"    data-form-action="prev">← Atrás</button>
+            <button class="btn btn-primary"  data-form-action="next" style="padding:.7rem 1.6rem">Siguiente →</button>
+          </div>
+        </div>
+
+        <!-- Paso 3 -->
+        <div class="form-step" id="step-2">
+          <div>
+            <p class="form-step-title" id="form-paso3-titulo"></p>
+            <p class="form-step-sub"   id="form-paso3-sub"></p>
+          </div>
+          <div class="form-group">
+            <label for="f-fecha"   class="form-label">Fecha preferida</label>
+            <input id="f-fecha"    type="date"  class="form-input">
+          </div>
+          <div class="form-group">
+            <label for="f-horario" class="form-label">Horario preferido</label>
+            <select id="f-horario" class="form-select"></select>
+          </div>
+          <div class="form-group">
+            <label for="f-mensaje" class="form-label">Notas adicionales</label>
+            <textarea id="f-mensaje" class="form-textarea"></textarea>
+          </div>
+          <div class="form-nav">
+            <button class="btn btn-ghost"   data-form-action="prev">← Atrás</button>
+            <button class="btn btn-primary" data-form-action="submit" style="padding:.7rem 1.6rem">Enviar solicitud ✦</button>
+          </div>
+        </div>
+
+        <!-- Éxito -->
+        <div class="form-success" id="form-success" role="alert">
+          <div class="success-icon" aria-hidden="true">✓</div>
+          <p class="success-title" id="success-title"></p>
+          <p class="success-text"  id="success-text"></p>
+          <a id="success-wa" href="#" target="_blank" rel="noopener" class="btn btn-primary" style="margin-top:.5rem"></a>
+        </div>
       </div>
+
     </div>
-  </footer>
-
-  <!-- ══════════════════════════════════════
-       ELEMENTOS FLOTANTES
-  ══════════════════════════════════════ -->
-  <a id="whatsapp-float" href="#" target="_blank" rel="noopener"
-     aria-label="Contactar por WhatsApp" title="WhatsApp">
-    <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
-      <path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/>
-    </svg>
-  </a>
-
-  <button id="back-to-top" aria-label="Volver arriba" title="Volver arriba">↑</button>
-
-  <!-- ══════════════════════════════════════
-       LIGHTBOX
-  ══════════════════════════════════════ -->
-  <div id="lightbox" role="dialog" aria-modal="true" aria-label="Vista ampliada de imagen">
-    <button id="lightbox-close" aria-label="Cerrar">✕</button>
-    <img id="lightbox-img" src="" alt="">
   </div>
+</section>
 
-  <!-- ══════════════════════════════════════
-       SCRIPTS — en orden de dependencia
-  ══════════════════════════════════════ -->
-  <script src="js/renderer.js"></script>
-  <script src="js/app.js"></script>
-  <script src="js/enhancements.js"></script>
+<!-- FOOTER -->
+<footer id="footer" role="contentinfo">
+  <div class="container">
+    <div class="footer-grid">
+      <div class="footer-brand">
+        <div id="footer-logo"></div>
+        <p  id="footer-tagline" class="footer-tagline"></p>
+        <div id="footer-social" class="footer-social"></div>
+      </div>
+      <div class="footer-col">
+        <p id="footer-col-servicios-title" class="footer-col-title"></p>
+        <ul id="footer-servicios"></ul>
+      </div>
+      <div class="footer-col">
+        <p id="footer-col-salon-title" class="footer-col-title"></p>
+        <ul>
+          <li><a href="#sobre">Nuestra historia</a></li>
+          <li><a href="#galeria">Galería</a></li>
+          <li><a href="#precios">Precios</a></li>
+          <li><a href="#testimonios">Testimonios</a></li>
+          <li><a href="#faq">Preguntas frecuentes</a></li>
+          <li><a href="#contacto">Contacto</a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <span id="footer-copy" class="footer-copy"></span>
+      <span id="footer-tagline-bottom" class="footer-copy" style="opacity:.4"></span>
+    </div>
+  </div>
+</footer>
+
+<!-- FLOTANTES -->
+<a id="whatsapp-float" href="#" target="_blank" rel="noopener" aria-label="WhatsApp">
+  <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg>
+</a>
+<button id="back-to-top" aria-label="Volver arriba" title="Volver arriba">↑</button>
+
+<!-- LIGHTBOX -->
+<div id="lightbox" role="dialog" aria-modal="true" aria-label="Vista ampliada">
+  <button id="lightbox-close" aria-label="Cerrar">✕</button>
+  <img id="lightbox-img" src="" alt="">
+</div>
+
+<!-- SCRIPTS en orden de dependencia -->
+<script src="js/renderer.js"></script>
+<script src="js/app.js"></script>
+<script src="js/carousel.js"></script>
+<script src="js/gallery.js"></script>
+<script src="js/slider.js"></script>
+<script src="js/enhancements.js"></script>
 
 </body>
 </html>
