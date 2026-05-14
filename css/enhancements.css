@@ -28,8 +28,15 @@
   display:flex; align-items:center; gap:.75rem;
 }
 .marca-item:hover { opacity:1; color:var(--color-gold); }
-.marca-item img   { height:24px; width:auto; object-fit:contain; opacity:.5; filter:grayscale(1); transition:all var(--transition-base); }
-.marca-item:hover img { opacity:1; filter:grayscale(0); }
+.marca-item img {
+  width: 120px;
+  height: 60px;
+  object-fit: contain;
+  filter: brightness(4) invert(1);
+  opacity: .75;
+  transition: all var(--transition-base);
+}
+.marca-item:hover img { opacity:1; }
 .marca-sep { color:var(--color-border); font-size:1rem; flex-shrink:0; }
 @keyframes marquee { 0%{transform:translateX(0)} 100%{transform:translateX(-50%)} }
 

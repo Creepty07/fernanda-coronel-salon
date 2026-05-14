@@ -164,7 +164,7 @@ const Renderer = (() => {
     if (!track) return;
     const items = cfg().marcas.map(m =>
       `<span class="marca-item">
-        ${m.logoUrl ? `<img src="${m.logoUrl}" alt="${m.nombre}">` : m.nombre}
+        ${m.logoUrl ? `<img src="${m.logoUrl}" alt="${m.nombre}" style="${m.invertir ? 'filter:invert(1)' : ''}">` : m.nombre}
       </span><span class="marca-sep" aria-hidden="true">·</span>`).join('');
     // Duplicar para loop continuo
     track.innerHTML = `<div class="marquee-group">${items}</div><div class="marquee-group" aria-hidden="true">${items}</div>`;

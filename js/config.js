@@ -182,12 +182,12 @@ window.FC = {
      logoUrl: null = muestra solo el nombre en texto elegante
   ───────────────────────────────────────────────────────── */
   marcas: [
-    { nombre: "Wella",                logoUrl: null },
-    { nombre: "Kérastase",            logoUrl: null },
-    { nombre: "L'Oréal Professionnel",logoUrl: null },
-    { nombre: "Redken",               logoUrl: null },
-    { nombre: "Olaplex",              logoUrl: null },
-    { nombre: "Schwarzkopf",          logoUrl: null },
+    { nombre: "Wella",                logoUrl: "assets/images/wella.png", invertir: false },
+    { nombre: "Kérastase",            logoUrl: "assets/images/kerastase.png", invertir: true },
+    { nombre: "L'Oréal Professionnel",logoUrl: "assets/images/loreal.png", invertir: true },
+    { nombre: "Redken",               logoUrl: "assets/images/redken.png",invertir: true },
+    { nombre: "Olaplex",              logoUrl: "assets/images/olaplex.png", invertir: true },
+    { nombre: "Schwarzkopf",          logoUrl: "assets/images/schwarzkopf.png", invertir: true },
   ],
 
   /* ─────────────────────────────────────────────────────────
@@ -262,7 +262,7 @@ window.FC = {
   ───────────────────────────────────────────────────────── */
   instagram: {
     previews: [
-      { src:"https://instagram.fgdl3-1.fna.fbcdn.net/v/t51.82787-15/598784134_17989114781911178_6244823688558224421_n.jpg?stp=dst-jpg_e15_tt6&_nc_cat=102&ig_cache_key=Mzc4Njk2NTM0ODY2ODA1MjcwMjE3OTg5MTE0Nzc1OTExMTc4.3-ccb7-5&ccb=7-5&_nc_sid=58cdad&efg=eyJ2ZW5jb2RlX3RhZyI6IkNMSVBTLnhwaWRzLjEwODAuc2RyLnZpZGVvX2RlZmF1bHRfY292ZXJfZnJhbWUuQzMifQ%3D%3D&_nc_ohc=OiJL6po5q5gQ7kNvwF_yo8A&_nc_oc=Adp-OlxSqzy73RCVyKpx8WIpYa-HSlDSXN1vYbEKtt1H9leBMN8LE1230sIh_7HBDPFCKGCwQZ_4Fq1bazVBhW03&_nc_ad=z-m&_nc_cid=0&_nc_zt=23&_nc_ht=instagram.fgdl3-1.fna&_nc_gid=ZZ9uw2u2f-Ycr59YGVALqQ&_nc_ss=7a22e&oh=00_Af5x20JN1aOd5Hny-_rMbYvIYblNz11-KDHoTrMih_93zw&oe=6A0B0079", alt:"Reel", reelUrl: "https://www.instagram.com/fernandacoronelsalon/reel/DSOAOugEpTe/" },
+      { src:"https://scontent-qro1-1.cdninstagram.com/v/t39.30808-6/481085707_599996736360649_4711533093264767635_n.jpg?stp=dst-jpg_e35_p640x640_sh2.08_tt6&_nc_cat=103&ig_cache_key=MzU1MTM2NzU0MTkzOTI3MTkxNQ%3D%3D.3-ccb7-5&ccb=7-5&_nc_sid=58cdad&efg=eyJ2ZW5jb2RlX3RhZyI6IkZFRUQueHBpZHMuMTM2Ny5zZHIucmVndWxhcl9waG90by5DMyJ9&_nc_ohc=OFyGhJQ8-SUQ7kNvwHa-05Y&_nc_oc=AdrGqSt1yo82s6sk4eQvDOiTdVKdKFcdCFhK6KgIAgxuotQGu0NFhND5HF0buSOv37smd4CPNiL-Z730JpSHN2y5&_nc_ad=z-m&_nc_cid=0&_nc_zt=23&_nc_ht=scontent-qro1-1.cdninstagram.com&_nc_gid=OKMvlyFh9doh-lRh45D0oQ&_nc_ss=7a22e&oh=00_Af6dupL-e_M6eRa9K3asKSLRiRNBXs6S8Yr5xoLm9Cmg3g&oe=6A0B3673", alt:"Reel", reelUrl: "https://www.instagram.com/fernandacoronelsalon/reel/DSOAOugEpTe/" },
       { src:"https://instagram.fgdl10-1.fna.fbcdn.net/v/t39.30808-6/483524888_609828758710780_7366408945047398361_n.jpg?stp=c0.170.1367.1708a_dst-jpg_e35_tt6&_nc_cat=103&ig_cache_key=MzU2ODAzNzI4NjAxNTIxODQ5Nw%3D%3D.3-ccb7-5&ccb=7-5&_nc_sid=58cdad&efg=eyJ2ZW5jb2RlX3RhZyI6IkZFRUQueHBpZHMuMTM2Ny5zZHIucmVndWxhcl9waG90by5DMyJ9&_nc_ohc=vbXR1cmZZTgQ7kNvwHKvHob&_nc_oc=AdoQXhmd8Ph83M02J-qgjGHVl5IrBAQ8pGfPfHH9WDy8htT1HGMxBl1JzyhFzgmQhB9dbPp_1hQkk9qp_LtvrBdA&_nc_ad=z-m&_nc_cid=0&_nc_zt=23&_nc_ht=instagram.fgdl10-1.fna&_nc_gid=dgZm_zTs44c17M_CMeCdbA&_nc_ss=7a22e&oh=00_Af6wTXX_j6kXFSc1jQRPcIkoYcpzTq7iYG8uBaWUV7YgPQ&oe=6A0B16C4", alt:"Post", reelUrl: null },
       { src:"https://instagram.fgdl3-1.fna.fbcdn.net/v/t39.30808-6/480729072_600012833025706_2518510594811241207_n.jpg?stp=dst-jpg_e35_tt6&_nc_cat=105&ig_cache_key=MzU1ODY3NTU4NTEzMjgyMzIzMQ%3D%3D.3-ccb7-5&ccb=7-5&_nc_sid=58cdad&efg=eyJ2ZW5jb2RlX3RhZyI6IkZFRUQueHBpZHMuMTM2Ni5zZHIucmVndWxhcl9waG90by5DMyJ9&_nc_ohc=Kqgqo-j6TuwQ7kNvwEPlS9B&_nc_oc=Adp0Oe0rRw3q6g1BIc9AY-tu1HvX68SbDCq9ZqOJge7W3HqVIIQSF4zo0dXoyyTnYZtMD7redg3xCRddrvcq2vyq&_nc_ad=z-m&_nc_cid=0&_nc_zt=23&_nc_ht=instagram.fgdl3-1.fna&_nc_gid=LU1J6Mw0O1opFQPh1-dyPA&_nc_ss=7a22e&oh=00_Af7xpq_bNPJ9XAxWPQcWnVCsHKXHfbB7B944CneJItoIVw&oe=6A0B303D", alt:"Post", reelUrl: null }
     ],
