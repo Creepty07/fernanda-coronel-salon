@@ -230,7 +230,7 @@ window.FC = {
   antesYdespues: [
     { servicio:"Corte",    antes:"assets/images/antes_1.jpg",  despues:"assets/images/despues_1.jpg" },
     { servicio:"Tratamiento Capilar", antes:"assets/images/antes_2.jpg",  despues:"assets/images/despues_2.jpg" },
-    { servicio:"Maquillaje",  antes:"https://images.unsplash.com/photo-1531746020798-e6953c6e8e04?w=600&q=80",  despues:"https://images.unsplash.com/photo-1487412912498-0447578fcca8?w=600&q=80" },
+    { servicio:"Maquillaje",  antes:"assets/images/antes_2.jpg",  despues:"assets/images/despues_2.jpg" },
   ],
 
   /* ─────────────────────────────────────────────────────────
