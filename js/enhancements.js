@@ -201,6 +201,10 @@ const MultiStepFormModule = (() => {
     $('steps-indicator').style.display = 'none';
     $('form-success')?.classList.add('show');
 
+    dataLayer.push({
+      event: "formulario_whatsapp_enviado"
+    });
+
     // Abre WhatsApp automáticamente
     window.open(link, '_blank', 'noopener,noreferrer');
   }
