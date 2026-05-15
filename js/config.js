@@ -141,7 +141,7 @@ window.FC = {
   ───────────────────────────────────────────────────────── */
   hero: {
     // Imagen de fondo (usa videoUrl para video, imagenUrl para imagen)
-    imagenUrl: "https://images.unsplash.com/photo-1560066984-138dadb4c035?w=1920&q=80",
+    imagenUrl: "assets/images/hero.jpeg",
     videoUrl:  null,
     typewriterPhrases: [
       "Belleza con propósito",
@@ -196,7 +196,7 @@ window.FC = {
   servicios: [
     { id:"efectos-color", tag:"color",      icono:"✦", nombre:"Efectos de Color",       desc:"Transformaciones que realzan tu personalidad con técnicas de colorimetría avanzada.", subcategorias:["Balayage","Baby lights","Luces","Diseño de color","Transparencias"], imagen:"https://images.unsplash.com/photo-1595476108010-b4d1f102b1b1?w=600&q=80" },
     { id:"tintes",        tag:"tintes",     icono:"◈", nombre:"Tintes",                 desc:"Coloración profesional con pigmentos de alta duración que nutren y protegen.", subcategorias:[], imagen:"https://images.unsplash.com/photo-1562322140-8baeececf3df?w=600&q=80" },
-    { id:"cortes",        tag:"cortes",     icono:"✂", nombre:"Cortes",                 desc:"Precisión milimétrica adaptada a tu rostro, estilo de vida y personalidad.", subcategorias:[], imagen:"https://images.unsplash.com/photo-1605497788044-5a32c7078486?w=600&q=80" },
+    { id:"cortes",        tag:"cortes",     icono:"✂", nombre:"Cortes",                 desc:"Precisión milimétrica adaptada a tu rostro, estilo de vida y personalidad.", subcategorias:[], imagen:"assets/images/servicios/corte1.jpeg" },
     { id:"alaciado",      tag:"tratamiento",icono:"〰",nombre:"Alaciado Permanente",     desc:"Resultados lisos y naturales de larga duración con fórmulas que respetan tu cabello.", subcategorias:[], imagen:"https://images.unsplash.com/photo-1519699047748-de8e457a634e?w=600&q=80" },
     { id:"nanoplastia",   tag:"tratamiento",icono:"◇", nombre:"Nanoplastía",            desc:"Alisado y nutrición profunda que elimina el frizz y devuelve suavidad y brillo.", subcategorias:[], imagen:"https://images.unsplash.com/photo-1527799820374-dcf8d9d4a388?w=600&q=80" },
     { id:"botox",         tag:"tratamiento",icono:"◉", nombre:"Botox Capilar",          desc:"Recupera la juventud de tu cabello con esta técnica de relleno de última generación.", subcategorias:[], imagen:"https://images.unsplash.com/photo-1516975080664-ed2fc6a32937?w=600&q=80" },
@@ -240,18 +240,16 @@ window.FC = {
   galeria: {
     initialMobile: 6,   // imágenes visibles en móvil antes de "Ver más"
     items: [
-      { tag:"color",       src:"https://images.unsplash.com/photo-1595476108010-b4d1f102b1b1?w=800&q=80", alt:"Balayage" },
-      { tag:"cortes",      src:"https://images.unsplash.com/photo-1605497788044-5a32c7078486?w=800&q=80", alt:"Corte" },
-      { tag:"extensiones", src:"https://images.unsplash.com/photo-1522337360788-8b13dee7a37e?w=800&q=80", alt:"Extensiones" },
-      { tag:"maquillaje",  src:"https://images.unsplash.com/photo-1487412912498-0447578fcca8?w=800&q=80", alt:"Maquillaje" },
-      { tag:"tintes",      src:"https://images.unsplash.com/photo-1562322140-8baeececf3df?w=800&q=80",    alt:"Tinte" },
-      { tag:"tratamiento", src:"https://images.unsplash.com/photo-1521590832167-7bcbfaa6381f?w=800&q=80", alt:"Tratamiento" },
-      { tag:"peinados",    src:"https://images.unsplash.com/photo-1492106087820-71f1a00d2b11?w=800&q=80", alt:"Peinado" },
-      { tag:"cejas",       src:"https://images.unsplash.com/photo-1629380447673-cf0572b8b0b7?w=800&q=80", alt:"Cejas" },
-      { tag:"color",       src:"https://images.unsplash.com/photo-1560066984-138dadb4c035?w=800&q=80",    alt:"Color" },
-      { tag:"cortes",      src:"https://images.unsplash.com/photo-1533327325824-76851d408d21?w=800&q=80", alt:"Corte femenino" },
-      { tag:"peinados",    src:"https://images.unsplash.com/photo-1519415510236-718bdfcd89c8?w=800&q=80", alt:"Peinado elegante" },
-      { tag:"tratamiento", src:"https://images.unsplash.com/photo-1519699047748-de8e457a634e?w=800&q=80", alt:"Alaciado" },
+      { tag:"balayage",       src:"assets/images/galeria/balayage.jpeg", alt:"Balayage" },
+      { tag:"cortes",      src:"assets/images/galeria/corte1.jpeg", alt:"Corte" },
+      { tag:"salon", src:"assets/images/galeria/lavado.jpeg", alt:"Área de Lavado" },
+      { tag:"balayage",  src:"assets/images/galeria/balayage1.jpeg", alt:"Maquillaje" },
+      { tag:"extensiones",    src:"assets/images/galeria/extensiones.jpeg", alt:"Extensiones" },
+      { tag:"salon",       src:"assets/images/galeria/zonadecortes.jpeg", alt:"Zona de Cortes" },
+      { tag:"tintes",       src:"assets/images/galeria/color.jpeg",    alt:"Color" },
+      { tag:"salon",      src:"assets/images/galeria/salon.jpeg", alt:"Salón" },
+      { tag:"salon",    src:"assets/images/galeria/recepcion1.jpeg", alt:"Recepción" },
+      { tag:"salon", src:"assets/images/galeria/depilacion1.jpeg", alt:"Zona de Depilación" },
     ],
   },
 
