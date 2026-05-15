@@ -259,7 +259,7 @@ const Renderer = (() => {
     const grid = $('ad-grid');
     if (!grid) return;
     grid.innerHTML = antesYdespues.map((ad, i) => `
-      <div class="ad-card reveal reveal-delay-${i+1}">
+      <div class="ad-card">
         <div class="ad-before" style="background-image:url('${ad.antes}')"></div>
         <div class="ad-after"  style="background-image:url('${ad.despues}')"></div>
         <input type="range" class="ad-slider" min="0" max="100" value="50"
