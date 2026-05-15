@@ -134,7 +134,14 @@
   border: 1px solid var(--color-border);
   user-select: none;
 }
-.ad-before,.ad-after { position:absolute; inset:0; background-size:cover; background-position:center; }
+.ad-before, .ad-after {
+  position: absolute;
+  inset: 0;
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  will-change: transform; /* fuerza al navegador a tenerlos en memoria */
+}
 .ad-after  { clip-path:inset(0 50% 0 0); }
 .ad-slider { position:absolute; inset:0; width:100%; height:100%; opacity:0; cursor:ew-resize; z-index:10; margin:0; padding:0; }
 .ad-line   { position:absolute; top:0; bottom:0; left:50%; width:2px; background:rgba(255,255,255,.85); pointer-events:none; z-index:4; }

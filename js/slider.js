@@ -37,17 +37,18 @@ const SliderModule = (() => {
           updateCard(card, Number(slider.value));
         });
 
-        // Forzar re-render de imágenes si no cargan
-        card.querySelectorAll('.ad-before, .ad-after').forEach(el => {
-          const bg = el.style.backgroundImage;
-          if (bg) {
-            // Crear imagen auxiliar para forzar precarga
-            const url = bg.slice(5, -2); // quitar url('...')
-            const img = new Image();
-            img.src = url;
-          }
-        });
-      });
-    },
-  };
-})();
+    card.querySelectorAll('.ad-before, .ad-after').forEach(el => {
+              const bg = el.style.backgroundImage;
+              if (!bg) return;
+              const url = bg.replace(/^url\(['"]?/, '').replace(/['"]?\)$/, '');
+              const img = new Image();
+              img.onload = () => {
+                el.style.backgroundImage = 'none';
+                el.style.backgroundImage = `url('${url}')`;
+              };
+              img.src = url;
+            });
+          });
+        },
+      };
+    })();
