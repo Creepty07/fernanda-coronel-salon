@@ -133,6 +133,7 @@
   height: 500px;
   border: 1px solid var(--color-border);
   user-select: none;
+  opacity: 1 !important;
 }
 .ad-before, .ad-after {
   position: absolute;
