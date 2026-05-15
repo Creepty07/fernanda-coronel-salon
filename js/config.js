@@ -182,12 +182,12 @@ window.FC = {
      logoUrl: null = muestra solo el nombre en texto elegante
   ───────────────────────────────────────────────────────── */
   marcas: [
-    { nombre: "Wella",                logoUrl: "assets/images/wella.png", invertir: false },
-    { nombre: "Kérastase",            logoUrl: "assets/images/kerastase.png", invertir: true },
-    { nombre: "L'Oréal Professionnel",logoUrl: "assets/images/loreal.png", invertir: true },
-    { nombre: "Redken",               logoUrl: "assets/images/redken.png",invertir: true },
-    { nombre: "Olaplex",              logoUrl: "assets/images/olaplex.png", invertir: true },
-    { nombre: "Schwarzkopf",          logoUrl: "assets/images/schwarzkopf.png", invertir: true },
+    { nombre: "Wella",                logoUrl: null, invertir: false },
+    { nombre: "Kérastase",            logoUrl: null, invertir: true },
+    { nombre: "L'Oréal Professionnel",logoUrl: null, invertir: true },
+    { nombre: "Redken",               logoUrl: null,invertir: true },
+    { nombre: "Olaplex",              logoUrl: null, invertir: true },
+    { nombre: "Schwarzkopf",          logoUrl: null, invertir: true },
   ],
 
   /* ─────────────────────────────────────────────────────────
