@@ -36,8 +36,8 @@ const CursorModule = (() => {
       }, { passive: true });
 
       const animate = () => {
-        rx += (mx - rx) * 0.12;
-        ry += (my - ry) * 0.12;
+        rx += (mx - rx) * 0.09;
+        ry += (my - ry) * 0.09;
         ring.style.left = rx + 'px'; ring.style.top = ry + 'px';
         requestAnimationFrame(animate);
       };
@@ -70,14 +70,19 @@ const TypewriterModule = (() => ({
     if (!phrases.length) return;
 
     let pi = 0, ci = 0, deleting = false;
+    const typeDelay = ch => {
+      if (ch === ',' || ch === ';') return 180 + Math.random() * 80;
+      if (ch === ' ') return 50 + Math.random() * 30;
+      return 72 + Math.random() * 68;
+    };
     const type = () => {
       const cur = phrases[pi];
       el.textContent = deleting ? cur.slice(0, --ci) : cur.slice(0, ++ci);
-      if (!deleting && ci === cur.length) { deleting = true; setTimeout(type, 2200); return; }
-      if (deleting && ci === 0)           { deleting = false; pi = (pi + 1) % phrases.length; }
-      setTimeout(type, deleting ? 45 : 90);
+      if (!deleting && ci === cur.length) { deleting = true; setTimeout(type, 2600); return; }
+      if (deleting && ci === 0) { deleting = false; pi = (pi + 1) % phrases.length; setTimeout(type, 400); return; }
+      setTimeout(type, deleting ? 28 + Math.random() * 20 : typeDelay(cur[ci]));
     };
-    setTimeout(type, 900);
+    setTimeout(type, 1200);
   },
 }))();
 
@@ -90,7 +95,7 @@ const ParallaxModule = (() => ({
     window.addEventListener('scroll', () => {
       const y = window.scrollY;
       if (y < window.innerHeight)
-        bg.style.transform = `translateY(${y * 0.28}px) scale(1.06)`;
+        bg.style.transform = `translateY(${y * 0.32}px) scale(1.1)`;
     }, { passive: true });
   },
 }))();
@@ -105,13 +110,15 @@ const CounterModule = (() => ({
         const el     = entry.target;
         const target = parseInt(el.dataset.target, 10);
         const sufijo = el.dataset.sufijo || '';
-        const step   = target / 60;
-        let cur      = 0;
-        const timer  = setInterval(() => {
-          cur = Math.min(cur + step, target);
-          el.textContent = Math.floor(cur) + sufijo;
-          if (cur >= target) clearInterval(timer);
-        }, 22);
+        const duration = 1600;
+        const start = performance.now();
+        const easeOut = t => 1 - Math.pow(1 - t, 3);
+        const tick = now => {
+          const t = Math.min((now - start) / duration, 1);
+          el.textContent = Math.round(easeOut(t) * target) + sufijo;
+          if (t < 1) requestAnimationFrame(tick);
+        };
+        requestAnimationFrame(tick);
         obs.unobserve(el);
       });
     }, { threshold: .5 });
