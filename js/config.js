@@ -130,7 +130,7 @@ window.FC = {
      Pon null para desactivarlo completamente.
   ───────────────────────────────────────────────────────── */
   banner: {
-    texto:  "✦  Consulta gratuita en tu primera visita — Menciona esta página",
+    texto:  "✦  Primera visita: diagnóstico capilar + consultoría de imagen GRATIS",
     cta:    "Agendar ahora",
     ctaUrl: "#contacto",
   },
@@ -148,6 +148,7 @@ window.FC = {
       "Estilo con esencia",
       "Técnica impecable",
       "Tu mejor versión",
+      "10 técnicas de extensiones",
     ],
     cta1Texto: "Agenda tu cita",
     cta2Texto: "Ver servicios",
@@ -228,7 +229,6 @@ window.FC = {
   antesYdespues: [
     { servicio:"Corte",    antes:"assets/images/antes_1.jpg",  despues:"assets/images/despues_1.jpg" },
     { servicio:"Tratamiento Capilar", antes:"assets/images/antes_2.jpg",  despues:"assets/images/despues_2.jpg" },
-    { servicio:"Maquillaje",  antes:"assets/images/antes_2.jpg",  despues:"assets/images/despues_2.jpg" },
   ],
 
   /* ─────────────────────────────────────────────────────────
@@ -258,9 +258,12 @@ window.FC = {
   ───────────────────────────────────────────────────────── */
   instagram: {
     previews: [
-      { src:"https://scontent-qro1-1.cdninstagram.com/v/t39.30808-6/481085707_599996736360649_4711533093264767635_n.jpg?stp=dst-jpg_e35_p640x640_sh2.08_tt6&_nc_cat=103&ig_cache_key=MzU1MTM2NzU0MTkzOTI3MTkxNQ%3D%3D.3-ccb7-5&ccb=7-5&_nc_sid=58cdad&efg=eyJ2ZW5jb2RlX3RhZyI6IkZFRUQueHBpZHMuMTM2Ny5zZHIucmVndWxhcl9waG90by5DMyJ9&_nc_ohc=OFyGhJQ8-SUQ7kNvwHa-05Y&_nc_oc=AdrGqSt1yo82s6sk4eQvDOiTdVKdKFcdCFhK6KgIAgxuotQGu0NFhND5HF0buSOv37smd4CPNiL-Z730JpSHN2y5&_nc_ad=z-m&_nc_cid=0&_nc_zt=23&_nc_ht=scontent-qro1-1.cdninstagram.com&_nc_gid=OKMvlyFh9doh-lRh45D0oQ&_nc_ss=7a22e&oh=00_Af6dupL-e_M6eRa9K3asKSLRiRNBXs6S8Yr5xoLm9Cmg3g&oe=6A0B3673", alt:"Reel", reelUrl: "https://www.instagram.com/fernandacoronelsalon/reel/DSOAOugEpTe/" },
-      { src:"https://instagram.fgdl10-1.fna.fbcdn.net/v/t39.30808-6/483524888_609828758710780_7366408945047398361_n.jpg?stp=c0.170.1367.1708a_dst-jpg_e35_tt6&_nc_cat=103&ig_cache_key=MzU2ODAzNzI4NjAxNTIxODQ5Nw%3D%3D.3-ccb7-5&ccb=7-5&_nc_sid=58cdad&efg=eyJ2ZW5jb2RlX3RhZyI6IkZFRUQueHBpZHMuMTM2Ny5zZHIucmVndWxhcl9waG90by5DMyJ9&_nc_ohc=vbXR1cmZZTgQ7kNvwHKvHob&_nc_oc=AdoQXhmd8Ph83M02J-qgjGHVl5IrBAQ8pGfPfHH9WDy8htT1HGMxBl1JzyhFzgmQhB9dbPp_1hQkk9qp_LtvrBdA&_nc_ad=z-m&_nc_cid=0&_nc_zt=23&_nc_ht=instagram.fgdl10-1.fna&_nc_gid=dgZm_zTs44c17M_CMeCdbA&_nc_ss=7a22e&oh=00_Af6wTXX_j6kXFSc1jQRPcIkoYcpzTq7iYG8uBaWUV7YgPQ&oe=6A0B16C4", alt:"Post", reelUrl: null },
-      { src:"https://instagram.fgdl3-1.fna.fbcdn.net/v/t39.30808-6/480729072_600012833025706_2518510594811241207_n.jpg?stp=dst-jpg_e35_tt6&_nc_cat=105&ig_cache_key=MzU1ODY3NTU4NTEzMjgyMzIzMQ%3D%3D.3-ccb7-5&ccb=7-5&_nc_sid=58cdad&efg=eyJ2ZW5jb2RlX3RhZyI6IkZFRUQueHBpZHMuMTM2Ni5zZHIucmVndWxhcl9waG90by5DMyJ9&_nc_ohc=Kqgqo-j6TuwQ7kNvwEPlS9B&_nc_oc=Adp0Oe0rRw3q6g1BIc9AY-tu1HvX68SbDCq9ZqOJge7W3HqVIIQSF4zo0dXoyyTnYZtMD7redg3xCRddrvcq2vyq&_nc_ad=z-m&_nc_cid=0&_nc_zt=23&_nc_ht=instagram.fgdl3-1.fna&_nc_gid=LU1J6Mw0O1opFQPh1-dyPA&_nc_ss=7a22e&oh=00_Af7xpq_bNPJ9XAxWPQcWnVCsHKXHfbB7B944CneJItoIVw&oe=6A0B303D", alt:"Post", reelUrl: null }
+      { src:"assets/images/instagram/preview_1.jpg", alt:"Reel", reelUrl: "https://www.instagram.com/fernandacoronelsalon/reel/DSOAOugEpTe/" },
+      { src:"assets/images/instagram/preview_2.jpg", alt:"Post", reelUrl: null },
+      { src:"assets/images/instagram/preview_3.jpg", alt:"Post", reelUrl: null },
+      { src:"assets/images/instagram/preview_4.jpg", alt:"Post", reelUrl: null },
+      { src:"assets/images/instagram/preview_5.jpg", alt:"Post", reelUrl: null },
+      { src:"assets/images/instagram/preview_6.jpg", alt:"Post", reelUrl: null },
     ],
   },
 
@@ -286,10 +289,10 @@ window.FC = {
 
   {
     nombre:"Marcia Bolaños",
-    servicio:"",
+    servicio:"Tintes",
     avatar:"M",
     estrellas:5,
-    texto:"Siempre un servicio increíble. El trato al cliente y el trabajo que hacen es el mejor."
+    texto:"Llevo más de 2 años viniendo para mis tintes y cada visita es igual de increíble. El resultado siempre dura y el trato es inigualable."
   },
 
   {
@@ -302,18 +305,18 @@ window.FC = {
 
   {
     nombre:"Dolores Vallejo",
-    servicio:"",
+    servicio:"Nanoplastía",
     avatar:"D",
     estrellas:5,
-    texto:"Excelente servicio. Muy recomendable."
+    texto:"Me hice la nanoplastía y el cambio fue increíble: de un cabello con frizz constante a uno completamente liso y suave. Vale cada peso."
   },
 
   {
     nombre:"Nilce Karina",
-    servicio:"",
+    servicio:"Extensiones",
     avatar:"N",
     estrellas:5,
-    texto:"Excelente servicio y muy lindo el lugar. 100% recomendado."
+    texto:"El salón es hermoso y el servicio de primera. Me hicieron extensiones por primera vez y quedé enamorada del resultado. 100% recomendado."
   }
 ],
 
@@ -336,7 +339,7 @@ window.FC = {
     title:       "Fernanda Coronel Salón | Belleza Premium en Juriquilla, Querétaro",
     description: "Salón de belleza profesional en Juriquilla, Querétaro. Balayage, extensiones, nanoplastía, cortes y maquillaje de alto nivel. Agenda tu cita.",
     keywords:    "salón belleza juriquilla, balayage querétaro, extensiones cabello querétaro, nanoplastía querétaro, corte cabello juriquilla, Fernanda Coronel salón",
-    ogImage:     "https://images.unsplash.com/photo-1560066984-138dadb4c035?w=1200&q=80",
+    ogImage:     "assets/SEO/ogImage.jpg",
     canonical:   "https://fernandacoronel.com",
   },
 
