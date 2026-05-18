@@ -228,7 +228,7 @@ window.FC = {
   ───────────────────────────────────────────────────────── */
   antesYdespues: [
     { servicio:"Corte",    antes:"assets/images/antes_1.jpg",  despues:"assets/images/despues_1.jpg" },
-    { servicio:"Tratamiento Capilar", antes:"assets/images/antes_2.jpg",  despues:"assets/images/despues_2.jpg" },
+    { servicio:"Botox Capilar", antes:"assets/images/antes_2.jpg",  despues:"assets/images/despues_2.jpg" },
   ],
 
   /* ─────────────────────────────────────────────────────────
@@ -359,11 +359,11 @@ window.FC = {
     },
     secciones: {
       sobre:         { label:"El Salón",             titulo:"Nuestra esencia" },
-      servicios:     { label:"Lo que hacemos",        titulo:"Servicios" },
+      servicios:     { label:"Lo que hacemos",        titulo:"Servicios",              cta:"Agendar este servicio →" },
       precios:       { label:"Transparencia total",   titulo:"Inversión en ti",        nota:"Los precios varían según el largo y la condición del cabello. Agenda una consulta gratuita para un presupuesto personalizado." },
       antesdespues:  { label:"La diferencia es visible", titulo:"Antes & Después",     instruccion:"Arrastra el slider para ver la transformación" },
       galeria:       { label:"Nuestros trabajos",     titulo:"Galería",                verMas:"Ver más" },
-      testimonios:   { label:"Ellas lo dicen",        titulo:"Testimonios" },
+      testimonios:   { label:"Ellas lo dicen",        titulo:"Testimonios",           cta:"Agenda tu cita ahora →" },
       faq:           { label:"Resolvemos tus dudas",  titulo:"Preguntas frecuentes" },
       instagram:     { label:"Síguenos",              titulo:"Instagram",              cta:"Ver Instagram →" },
       contacto:      { label:"Reserva tu lugar",      titulo:"Agenda tu cita",

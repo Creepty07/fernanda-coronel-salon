@@ -238,9 +238,36 @@ const MultiStepFormModule = (() => {
             const action = e.target.dataset.formAction;
             if (action === 'next'   && step < TOTAL - 1) goTo(step + 1);
             if (action === 'prev'   && step > 0)          goTo(step - 1);
-            if (action === 'submit')                       showSuccess();
+            if (action === 'submit') {
+              const fi = $('f-fecha');
+              if (fi?.value && new Date(fi.value + 'T00:00:00').getDay() === 0) return;
+              showSuccess();
+            }
           });
       }, 200);
+
+      const fechaInput = $('f-fecha');
+      if (fechaInput) {
+        const today = new Date();
+        const pad   = n => String(n).padStart(2, '0');
+        fechaInput.min = `${today.getFullYear()}-${pad(today.getMonth() + 1)}-${pad(today.getDate())}`;
+
+        fechaInput.addEventListener('change', () => {
+          const errEl    = fechaInput.parentElement.querySelector('.fecha-error');
+          const isSunday = fechaInput.value && new Date(fechaInput.value + 'T00:00:00').getDay() === 0;
+          if (isSunday) {
+            if (!errEl) {
+              const p = document.createElement('p');
+              p.className = 'fecha-error';
+              p.style.cssText = 'color:var(--color-gold);font-size:.82rem;margin-top:.35rem';
+              p.textContent = 'Estamos cerrados los domingos. Por favor elige otro día.';
+              fechaInput.parentElement.appendChild(p);
+            }
+          } else {
+            errEl?.remove();
+          }
+        });
+      }
     },
   };
 })();

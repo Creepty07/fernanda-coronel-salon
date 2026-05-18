@@ -212,6 +212,10 @@ const Renderer = (() => {
               <div class="servicio-subcats">
                 ${s.subcategorias.map(sc => `<span class="subcat-tag">${sc}</span>`).join('')}
               </div>` : ''}
+            <a href="${h().waLink()}" target="_blank" rel="noopener"
+               style="font-size:.78rem;color:var(--color-gold);margin-top:.75rem;display:inline-block;letter-spacing:.05em">
+              ${textos.secciones.servicios.cta}
+            </a>
           </div>
         </article>
       </div>`).join('');
@@ -337,6 +341,11 @@ const Renderer = (() => {
           </div>
         </div>
       </div>`).join('');
+
+    $('testimonios-carousel')?.insertAdjacentHTML('afterend',
+      `<div style="text-align:center;margin-top:2.5rem">
+        <a href="${h().waLink()}" target="_blank" rel="noopener" class="btn btn-primary reveal">${s.cta || 'Agenda tu cita ahora →'}</a>
+      </div>`);
   }
 
   // ── FAQ ──────────────────────────────────────────────────
